@@ -32,6 +32,9 @@
 .navbar-toggler {
     color: #fff;
 }
+.light .navbar-toggler {
+    color: #111827;
+}
 
 .navbar-toggler:focus {
     border: none;
