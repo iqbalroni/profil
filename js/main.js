@@ -1,5 +1,9 @@
 $(document).ready(function () {
 
+    setTimeout(function() {
+        $('#loading').hide();
+    }, 1000);
+
     $("#toUp").hide();
     // navbar
     $(window).scroll(function () {
