@@ -12,6 +12,8 @@
     cursor: pointer;
 }
 
+
+
 .navbar {
     background-color: #111827;
     color: #fff;
@@ -32,6 +34,7 @@
 .navbar-toggler {
     color: #fff;
 }
+
 .light .navbar-toggler {
     color: #111827;
 }
@@ -81,7 +84,7 @@
     }
 
     .workship {
-        margin-top: 40px;
+        margin-top: 20px;
 
         p {
             font-size: 1.2rem;
@@ -109,6 +112,10 @@
                 margin-top: 5px;
                 width: 100%;
                 font-size: 0.9rem;
+
+                .watching {
+                    font-size: 5px;
+                }
             }
         }
     }
@@ -151,6 +158,10 @@
                 margin-top: 5px;
                 width: 100%;
                 font-size: 0.9rem;
+
+                .watching {
+                    font-size: 5px;
+                }
             }
         }
     }
@@ -471,6 +482,10 @@
                 margin-top: 5px;
                 width: 100%;
                 font-size: 0.8rem;
+
+                .watching {
+                    font-size: 5px;
+                }
             }
         }
     }

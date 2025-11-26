@@ -35,12 +35,14 @@ $(document).ready(function () {
     $(".menu-about").hide();
     $(".menu-projek").hide();
     $(".menu-contact").hide();
+    $(".menu-youtube").hide();
 
     $("#beranda").click(function(){
         $('.menu-biodata').show(1000);
         $('.menu-home').show(1000);
         $('.menu-about').hide(2000);
         $(".menu-projek").hide(2000);
+        $(".menu-youtube").hide(2000);
         $(".menu-contact").hide(2000);
     })
     $("#about").click(function(){
@@ -48,6 +50,7 @@ $(document).ready(function () {
         $('.menu-home').hide(1000);
         $('.menu-about').show(2000);
         $(".menu-projek").hide(2000);
+        $(".menu-youtube").hide(2000);
         $(".menu-contact").hide(2000);
     })
     $("#projek").click(function(){
@@ -55,6 +58,7 @@ $(document).ready(function () {
         $('.menu-biodata').hide(1000);
         $('.menu-home').hide(1000);
         $('.menu-about').hide(2000);
+        $(".menu-youtube").hide(2000);
         $(".menu-contact").hide(2000);
     })
     $("#contact").click(function(){
@@ -62,7 +66,16 @@ $(document).ready(function () {
         $('.menu-biodata').hide(1000);
         $('.menu-home').hide(1000);
         $('.menu-about').hide(2000);
+        $(".menu-youtube").hide(2000);
         $(".menu-contact").show(2000);
+    });
+    $("#youtube").click(function(){
+        $(".menu-projek").hide(2000);
+        $('.menu-biodata').hide(1000);
+        $('.menu-home').hide(1000);
+        $('.menu-about').hide(2000);
+        $(".menu-youtube").show(2000);
+        $(".menu-contact").hide(2000);
     });
 
     // list project
@@ -71,7 +84,6 @@ $(document).ready(function () {
     $("#column").click(function(){
         $("#grid").show();
         $("#column").hide();
-        
         $("#proyek").removeClass("flexible").addClass("columns");
     });
 
