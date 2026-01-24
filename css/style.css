@@ -1,528 +1,1197 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 * {
-    font-family: "Inter", system-ui;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Space Mono", monospace;
+  background: #03040D;
+  overflow-x: hidden;
+  /* cursor: none; */
+}
+
+/* Secara default sembunyikan kursor kustom */
+.cursor-dot,
+.cursor-outline {
+  display: none;
+}
+
+/* Hanya munculkan di Desktop (Layar > 1024px) */
+@media (min-width: 1024px) {
+  body {
+    cursor: none;
+    /* Sembunyikan kursor asli hanya di desktop */
+  }
+
+  .cursor-dot,
+  .cursor-outline {
+    display: block;
+  }
+}
+
+.cursor-dot,
+.cursor-outline {
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  z-index: 9999;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.cursor-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #fff;
+  /* Hijau neon sesuai brand kamu */
+}
+
+.cursor-outline {
+  width: 40px;
+  height: 40px;
+  border: 2px solid #0ae448;
+  transition: all 0.15s ease-out;
+  /* Memberikan efek 'trailing' */
+}
+
+#loader {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #03040D;
+  z-index: 10000;
+}
+
+#loader .copyright {
+  position: absolute;
+  color: #fff;
+  opacity: 0.6;
+  bottom: 20px;
+  font-size: 0.8rem;
+}
+
+.loader-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader-content h1 {
+  color: #fff;
+  font-size: 80px;
+  font-weight: bolder;
+  letter-spacing: 8px;
+}
+
+.grid-container {
+  position: relative;
+  width: 100%;
+  /* min-height: 100vh; */
+}
+
+.grid-container .grid-mesh {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image:
+    linear-gradient(to right, rgba(10, 228, 72, 0.1) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(10, 228, 72, 0.1) 1px, transparent 1px);
+  background-size: 50px 50px;
+  z-index: 0;
+}
+
+/* Sub-elemen untuk Vignette */
+.grid-container .vignette-effect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle, transparent 30%, rgba(0, 0, 0, 0.8) 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.inner-content {
+  min-height: 100vh;
+  color: #fff;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* Dekorasi Teks */
+.inner-content h1 {
+  font-size: 5.3rem;
+  font-weight: bolder;
+  text-transform: uppercase;
+  margin: 0;
+  line-height: 80px;
+}
+
+.inner-content h1.accent {
+  font-size: 5rem;
+  -webkit-text-stroke: 2px #0ae448;
+  color: transparent;
+}
+
+.inner-content .deskripsi {
+  margin-top: 30px;
+  color: #a0a0a0;
+  max-width: 70%;
+  line-height: 1.5;
+  font-size: 1.2rem;
+  font-family: sans-serif;
+}
+
+.inner-content .deskripsi b {
+  padding: 0 10px;
+  margin: 0;
+  background-color: #0ae44830;
+  color: #0ae448;
+  font-weight: 100;
 }
 
 .navbar-brand {
-    font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 800;
 }
 
-.nav-link {
-    cursor: pointer;
+#navbar.padding {
+  padding-top: 25px;
 }
 
-
-
-.navbar {
-    background-color: #111827;
-    color: #fff;
-
-    a {
-        color: #fff;
-    }
-
-    a:hover {
-        color: #707070;
-    }
-
-    a:focus {
-        color: #707070;
-    }
+#navbar.blur {
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
 }
 
-.navbar-toggler {
-    color: #fff;
+.navbar-brand span {
+  color: #0ae448;
 }
 
-.light .navbar-toggler {
-    color: #111827;
+.navbar-nav {
+  gap: 10px;
 }
 
-.navbar-toggler:focus {
-    border: none;
-    outline: none;
+.navbar .nav-link {
+  color: #fff;
+  font-weight: 100;
+  font-size: 0.9rem;
+  /* cursor: pointer; */
+  text-transform: uppercase;
 }
 
-.navbar.sticky {
-    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+.navbar .nav-link:hover {
+  color: #0ae448;
 }
 
-.light .navbar.sticky {
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+.inner-content .box {
+  display: flex;
+  gap: 20px;
 }
 
-.banner {
-    padding-top: 100px;
-    min-height: 100vh;
-    background-color: #111827;
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    /* align-items: center; */
-
-    .welcome {
-        font-size: 1.3rem;
-    }
-
-    h2 {
-        font-size: 4rem;
-        font-weight: 700;
-    }
-
-    p {
-        font-size: 1.2rem;
-        width: 70%;
-    }
-
-    .download-cv {
-        margin-top: 20px;
-        background-color: #334155;
-        border-radius: 50px;
-        color: #fff;
-        padding: 10px 20px;
-    }
-
-    .workship {
-        margin-top: 20px;
-
-        p {
-            font-size: 1.2rem;
-        }
-
-        .card {
-            background-color: transparent;
-            border: 2px solid #fff;
-
-            .info {
-                /* background-color: #707070; */
-                width: 50px;
-                height: 50px;
-                border-radius: 10px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-
-                img {
-                    width: 75%;
-                }
-            }
-
-            .desc {
-                margin-top: 5px;
-                width: 100%;
-                font-size: 0.9rem;
-
-                .watching {
-                    font-size: 5px;
-                }
-            }
-        }
-    }
+.inner-content .profil {
+  display: flex;
+  gap: 20px;
 }
 
-.light .navbar {
-    background-color: #fff;
-    color: #111827;
-
-    a {
-        color: #111827;
-    }
+.inner-content .image-me img {
+  border-radius: 50%;
+  width: 150px;
+  /* Gunakan warna hijau neon yang konsisten */
+  border: 3px solid #00ff41;
+  /* Efek bayangan hijau yang halus */
+  box-shadow: 0 0 20px rgba(0, 255, 65, 0.2);
+  transition: all 0.3s ease-in-out;
 }
 
-
-.light .banner {
-    background-color: #fff;
-    color: #111827;
-
-    .download-cv {
-        margin-top: 20px;
-        background-color: #CBD5E1;
-        border-radius: 50px;
-        color: #111827;
-        padding: 10px 20px;
-    }
-
-    .workship {
-        margin-top: 40px;
-
-        p {
-            font-size: 1.2rem;
-        }
-
-        .card {
-            background-color: transparent;
-            border: 2px solid #111827;
-
-            .desc {
-                margin-top: 5px;
-                width: 100%;
-                font-size: 0.9rem;
-
-                .watching {
-                    font-size: 5px;
-                }
-            }
-        }
-    }
+.inner-content .image-me img:hover {
+  /* Memberikan efek interaksi saat disentuh kursor */
+  box-shadow: 0 0 30px rgba(0, 255, 65, 0.6);
+  transform: scale(1.02);
 }
 
-.titles {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-
-    .pop {
-        width: 15px;
-        height: 15px;
-        border-radius: 50%;
-        background-color: #FF3D00;
-        /* border: 1.9px solid white; */
-    }
-
-    .pop-web {
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-        background-color: #03B974;
-        /* border: 1.9px solid white; */
-    }
-
-    .pop-mobile {
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-        background-color: #FF3D00;
-        /* border: 1.9px solid white; */
-    }
-
-    .status {
-        display: flex;
-        /* justify-content: center; */
-        align-items: center;
-        gap: 10px;
-        font-size: 0.9rem;
-        font-weight: 500;
-    }
-
-    .pop-secondary {
-        width: 15px;
-        height: 15px;
-        border-radius: 50%;
-        background-color: #707070;
-        /* border: 1.9px solid white; */
-    }
-
-    .pop-title-bold {
-        font-weight: 800;
-    }
+.inner-content .kotak {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.07);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  border: 1px solid rgba(255, 255, 255, 0.41);
+  padding: 10px 10px;
+  margin-top: 10px;
 }
 
-.profil {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    margin: 20px 0;
-
-    .my-profil {
-        width: 180px;
-        height: 180px;
-        border-radius: 50%;
-        border: 5px solid #fff;
-        position: relative;
-    }
+.inner-content .kotak h4 {
+  font-size: 0.8rem;
+  margin: 0;
+  color: #0ae448;
 }
 
-.light .profil {
-    .my-profil {
-        border: 5px solid #111827;
-    }
+.inner-content .kotak h5 {
+  margin: 0;
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 0.9rem;
 }
 
-.hidden-effect {
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
+.tagline {
+  color: #0ae448;
+  margin-bottom: 50px;
+  letter-spacing: 2px;
 }
 
 .about {
-    padding-bottom: 100px;
-
-    p {
-        width: 100%;
-    }
-
-    .title {
-        margin-top: 20px;
-        font-size: 1.3rem;
-        font-weight: 700;
-    }
-
-    .list-tech {
-        width: 100%;
-        display: flex;
-        list-style: none;
-        gap: 10px;
-    }
+  min-height: 80vh;
+  color: #fff;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
-.more-info {
-    background-color: #334155;
-    border-radius: 50px;
-    color: #fff;
-    padding: 5px 15px;
+#sticky {
+  position: sticky;
+  top: 0;
 }
 
-.light .more-info {
-    background-color: #CBD5E1;
-    color: #111827;
+.about h2 {
+  font-size: clamp(2rem, 8vw, 7rem);
+  font-weight: 800;
+  letter-spacing: -.02em;
+  line-height: .85;
+  text-transform: uppercase;
+  margin: 0;
 }
 
-.flexible {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
+.about .deskripsi {
+  font-family: sans-serif;
+  margin-top: 30px;
+  color: #a0a0a0;
+  line-height: 1.5;
+  font-size: 1.2rem;
+  width: 80%;
 }
 
-.flexible .card {
-    flex: 1 1 calc(33.33% - 30px);
+.about .deskripsi b {
+  font-weight: 100;
+  padding: 0 10px;
+  margin: 0;
+  background-color: #0ae44830;
+  color: #0ae448;
 }
 
-.columns .card {
-    flex: 0;
-    margin-bottom: 10px;
+.card-porto button,
+.about button {
+  margin-top: 40px;
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  display: flex;
+  gap: 20px;
+  align-items: center;
 }
 
-.formasi {
-    width: 35px;
-    height: 35px;
-    border-radius: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* border: 1.5px solid #fff; */
-    background-color: #334155;
-    margin-bottom: 10px;
-    cursor: pointer;
+.about button:hover {
+  color: #0ae448;
 }
 
-.formasi:hover {
-    background-color: transparent;
-    border: 2px solid #fff;
+#next-section {
+  z-index: 3;
+  background-color: #03040D;
 }
 
-.light .formasi {
-    background-color: #CBD5E1;
-    color: #111827;
+.porto {
+  min-height: 100vh;
+  color: #fff;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
-.light .formasi:hover {
-    background-color: transparent;
-    border: 2px solid #111827;
+.porto h2 {
+  font-size: clamp(1.25rem, 4vw, 4rem);
+  font-weight: 800;
+  letter-spacing: -.02em;
+  line-height: .85;
+  text-transform: uppercase;
+  margin: 0;
+  line-height: .9;
 }
 
-.form-control {
-    background-color: transparent;
-    border: 1px solid #fff;
-    color: #fff;
+.porto .deskripsi {
+  margin-top: 30px;
+  font-family: sans-serif;
+  color: #a0a0a0;
+  line-height: 1.6;
+  font-size: 1.2rem;
+  width: 100%;
 }
 
-.form-control:focus {
-    background-color: transparent;
-    border: 1px solid #334155;
-    color: #fff;
-    outline: none;
+.porto .card-porto {
+  background-color: #0D0D0D;
+  border: 1px solid #a0a0a0;
+  min-height: 80vh;
+  position: absolute;
+  transform: translateY(-50%);
+  width: 550px;
+  z-index: 1;
+  transition: all 0.8s ease-out;
 }
 
-.light .form-control {
-    border: 1px solid #334155;
-    color: #111827;
+.porto .card-porto:hover {
+  transition: all 0.5s ease-in-out;
+  border: 1px solid #0ae448;
 }
 
-.light .form-control:focus {
-    border: 1px solid #334155;
-    color: #111827;
+.porto .card-porto:hover .title-card {
+  color: #0ae448;
 }
 
-.top-button {
-    width: 40px;
-    height: 40px;
-    background-color: #334155;
-    border-radius: 5px;
-    color: #fff;
-    position: fixed;
-    bottom: 50px;
-    right: 50px;
-    z-index: 88;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: all 0.5s ease-in-out;
-    text-decoration: none;
+
+.porto .image-porto {
+  width: 100%;
 }
 
-.top-button:hover {
-    background-color: transparent;
-    border: 1px solid #fff;
-    color: #334155;
+.container-portofolio {
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
 }
 
-.jarak-bawah {
-    margin-bottom: 10px;
+.container-portofolio .text-content {
+  width: 40%;
+  z-index: 5;
 }
 
-.loading {
-    height: 100vh;
-    width: 100%;
-    background-color: #111827;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 100;
-
-    i {
-        color: #fff;
-        font-size: 4rem;
-        animation: rotate 2s linear infinite;
-    }
+.card-porto {
+  position: absolute;
+  width: 200px;
+  overflow: hidden;
+  /* Mulai di luar layar sebelah kanan */
+  left: 150%;
+  top: 50%;
+  transform: translateY(-50%);
+  box-shadow: -15px 0 30px rgba(0, 0, 0, 0.8);
 }
 
-.light .loading {
-    background-color: #fff;
-
-    i {
-        color: #111827;
-    }
+.porto .body-card {
+  padding: 20px 40px;
 }
 
-@keyframes rotate {
-    0% {
-        transform: rotate(0deg);
-    }
+.body-card .title-card {
+  font-size: 2rem;
+  margin: 0;
+  font-weight: 700;
+}
 
-    100% {
-        transform: rotate(360deg);
-    }
+.body-card .stack {
+  display: flex;
+  gap: 10px;
+  margin: 0;
+}
+
+.body-card .menu {
+  padding: 5px 10px;
+  margin: 0;
+  background-color: #0ae44830;
+  color: #0ae448;
+  font-size: 14px;
+}
+
+.body-card .desk-card {
+  color: #0ae448;
+  font-size: 18px;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+.body-card .sub-card {
+  color: #a0a0a0;
+  font-size: 16px;
+}
+
+.body-card button {
+  margin-top: 20px;
+}
+
+.penjelasan {
+  font-size: 18px;
+  font-family: sans-serif;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.cards-wrapper {
+  position: relative;
+  width: 60%;
+  height: 80vh;
+}
+
+.satu {
+  z-index: 1;
+}
+
+.dua {
+  z-index: 2;
+}
+
+.tiga {
+  z-index: 3;
+}
+
+.empat {
+  z-index: 4;
+}
+
+
+/* language */
+.body-card .flutter {
+  background-color: #5bc3f044;
+  color: #5BC3F0;
+}
+
+.body-card .mysql {
+  background-color: #00618A44;
+  color: #F29111;
+}
+
+.body-card .figma {
+  background-color: #2D3039;
+  color: #EA4C1D;
+}
+
+.body-card .laravel {
+  background-color: #F63002;
+  color: #fff;
+}
+
+.body-card .bootstrap {
+  background-color: #6F2CF5;
+  color: #fff;
+}
+
+#youtube {
+  z-index: 3;
+  background-color: #03040D;
+  padding: 40px 0;
+}
+
+.youtube {
+  min-height: 100vh;
+  color: #fff;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.youtube .tagline {
+  margin-bottom: 30px;
+}
+
+.youtube h2 {
+  font-size: clamp(1.25rem, 4vw, 4rem);
+  font-weight: 800;
+  letter-spacing: -.02em;
+  line-height: .85;
+  text-transform: uppercase;
+  margin: 0;
+  line-height: .9;
+}
+
+.youtube .deskripsi {
+  margin-top: 10px;
+  color: #a0a0a0;
+  line-height: 1.5;
+  font-size: 1.2rem;
+  width: 100%;
+  font-family: sans-serif;
+  margin-bottom: 20px;
+}
+
+.youtube .flexible {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.youtube .flexible .card-youtube {
+  flex: 1 1 calc(33.33% - 30px);
+  opacity: 0;
+  transform: translateY(50px);
+  transition: background 0.3s;
+}
+
+
+.youtube .flexible .card-youtube h5 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-transform: uppercase;
+}
+
+.youtube .flexible .card-youtube:hover h5 {
+  color: #a0a0a0;
+}
+
+.youtube .flexible .card-youtube p {
+  font-size: 10px;
+  /* font-family: sans-serif; */
+  color: #a0a0a0;
+}
+
+.youtube .body-youtube .desc {
+  padding: 10px 0px;
+  margin-top: 5px;
+}
+
+.more-video {
+  margin-top: 10px;
+  text-decoration: none;
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.more-video:hover {
+  color: #0ae448;
+}
+
+#skill {
+  background-color: #03040D;
+  z-index: 3;
+}
+
+.skill-me {
+  min-height: 100vh;
+  color: #fff;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.skill-me h2 {
+  font-size: clamp(1.25rem, 4vw, 4rem);
+  font-weight: 800;
+  letter-spacing: -.02em;
+  line-height: .85;
+  text-transform: uppercase;
+  margin: 0;
+  line-height: .9;
+}
+
+.skill-me .deskripsi {
+  margin-top: 30px;
+  font-family: sans-serif;
+  color: #a0a0a0;
+  line-height: 1.5;
+  font-size: 1.2rem;
+  width: 100%;
+}
+
+.container-skill {
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.skill-me .text-content {
+  width: 35%;
+  z-index: 5;
+}
+
+.skill-me .grid-skill {
+  position: relative;
+  width: 60%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  /* padding: 20px; */
+}
+
+.skill-me .box {
+  border-top: 2px solid #a0a0a040;
+  color: white;
+  text-align: center;
+  font-size: 20px;
+  /* cursor: pointer; */
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.skill-me .box:hover {
+  border-top: 2px solid #fff;
+}
+
+.skill-me .box:hover .image-tech {
+  transform: scale(1.1);
+}
+
+.skill-me .box:hover .name-tech h4 {
+  color: #0ae448;
+}
+
+.skill-me .box .top {
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+
+.skill-me .box .image-tech {
+  width: 25%;
+}
+
+.skill-me .number {
+  font-size: 12px;
+  font-weight: 100;
+  color: #a0a0a0;
+}
+
+.name-tech {
+  padding: 0 20px;
+  text-align: left;
+}
+
+.name-tech h4 {
+  margin-top: 25px;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.name-tech h5 {
+  margin: 0;
+  color: #a0a0a0;
+  font-size: 0.7rem;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
+.footer {
+  z-index: 4;
+  min-height: 45vh;
+  background-image: url('../assets/bg.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  /* Atur tinggi transisi */
+  background: linear-gradient(to bottom, #000, transparent);
+  z-index: 1;
+}
+
+.footer .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  /* Angka 0.6 adalah tingkat kegelapan (0-1) */
+  z-index: 2;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 3;
+  /* Tambahkan styling tambahan sesuai desainmu */
+}
+
+.footer h4 {
+  color: #ffff;
+  font-size: clamp(2rem, 8vw, 7rem);
+  font-weight: 800;
+  letter-spacing: -.02em;
+  line-height: .85;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.footer .tombol {
+  color: #fff;
+}
+
+.footer button {
+  background: rgba(0, 0, 0, 0.575);
+  backdrop-filter: blur(13px);
+  -webkit-backdrop-filter: blur(3px);
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.footer button:hover {
+  background-color: #0ae448;
+  color: #03040D;
+}
+
+.footer .copyright {
+  color: #fff;
+  font-size: 0.8rem;
+  position: absolute;
+  z-index: 3;
+  bottom: 15px;
+  opacity: 0.6;
 }
 
 @media (max-width: 768px) {
-    .banner {
-        padding-top: 80px;
+  .navbar-toggler svg {
+    z-index: 9;
+    position: relative;
+    opacity: 1;
+    color: #00ff41;
+  }
 
-        .welcome {
-            font-size: 1rem;
-            font-weight: 600;
+  .navbar-toggler:focus,
+  .navbar-toggler:active,
+  .navbar-toggler:focus svg,
+  .navbar-toggler:active svg {
+    outline: none !important;
+    box-shadow: none !important;
+    color: #fff;
+  }
 
-        }
+  .navbar-toggler {
+    outline: none;
+    border: none;
+  }
 
-        h2 {
-            margin-top: 10px;
-            font-size: 2rem;
-        }
+  #loader .copyright {
+    font-size: 0.8rem;
+  }
 
-        p {
-            font-size: 1rem;
-            width: 100%;
-        }
+  .inner-content {
+    padding: 70px 20px;
+  }
 
-        .download-cv {
-            font-size: 0.8rem;
-        }
-    }
+  #navbar.padding {
+    padding-top: 10px;
+  }
 
-    .profil {
-        margin: 0;
+  .inner-content .image-me img {
+    width: 120px;
+    border: 2px solid #00ff41;
+  }
 
-        .my-profil {
-            width: 120px;
-            height: 120px;
-            border: 3px solid #fff;
-        }
-    }
+  .inner-content h1 {
+    font-size: 2.8rem;
+    line-height: 45px;
+    text-align: center;
+  }
 
-    .titles {
+  .inner-content h1.accent {
+    font-size: 2.5rem;
+    -webkit-text-stroke: 1px #0ae448;
+  }
 
-        .pop {
-            width: 10px;
-            height: 10px;
-        }
+  .inner-content .sisi {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 
-        .status {
-            font-size: 0.8rem;
-            font-weight: 500;
-        }
+  .inner-content .deskripsi {
+    margin-top: 20px;
+    max-width: 100%;
+    line-height: 1.2;
+    font-size: 1.1rem;
+    text-align: center;
+  }
 
-        .pop-secondary {
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            background-color: #707070;
-            /* border: 1.9px solid white; */
-        }
+  .inner-content .box {
+    gap: 10px;
+  }
 
-        .pop-title-bold {
-            font-weight: 800;
-        }
-    }
+  .inner-content .deskripsi b {
+    padding: 0 5px;
+  }
 
-    .workship {
-        margin-top: 40px;
+  .inner-content .profil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
 
-        p {
-            font-size: 1.2rem;
-        }
+  .inner-content .kotak {
+    gap: 5px;
+    padding: 7px 10px;
+    margin-top: 5px;
+  }
 
-        .card {
-            margin-bottom: 10px;
+  .inner-content .kotak h4 {
+    font-size: 0.6rem;
+  }
 
-            .desc {
-                margin-top: 5px;
-                width: 100%;
-                font-size: 0.8rem;
+  .inner-content .kotak h5 {
+    margin: 0;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 0.8rem;
+  }
 
-                .watching {
-                    font-size: 5px;
-                }
-            }
-        }
-    }
+  .tagline {
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    font-size: 1.1rem;
+  }
 
-    .top-button {
-        width: 40px;
-        height: 40px;
-        bottom: 10px;
-        right: 10px;
-    }
+  .about {
+    min-height: 100vh;
+    margin: 0 30px;
+  }
 
-    .list-tech {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 5px;
-    }
+  .porto {
+    min-height: auto;
+    color: #fff;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
 
-    .flexible {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 5px;
-    }
+  .container-portofolio .text-content {
+    width: 100%;
+    z-index: 5;
+  }
 
-    .flexible .card {
-        flex: 1 1 100%;
-    }
+  .container-portofolio {
+    padding: 50px 40px;
+    height: 100%;
+    gap: 0px;
+    flex-direction: column;
+  }
 
-    .formasi {
-        display: none;
-    }
+  .about h2 {
+    font-size: 3.8rem;
+  }
 
-    .contact-me {
-        margin-top: 20px;
-        padding-bottom: 20px;
-    }
+  .porto h2 {
+    font-size: 2.5rem;
+  }
 
-    .jarak-bawah {
-        margin-bottom: 5px;
-    }
+  .porto .deskripsi {
+    margin-top: 10px;
+    font-family: sans-serif;
+    color: #a0a0a0;
+    line-height: 1.2;
+    font-size: 1.1rem;
+    width: 100%;
+  }
+
+  .cards-wrapper {
+    position: relative;
+    width: 100%;
+  }
+
+  .about .deskripsi {
+    margin-top: 20px;
+    width: 100%;
+    line-height: 1.2;
+    font-size: 1.1rem;
+  }
+
+  .card-porto button,
+  .about button {
+    margin-top: 30px;
+    font-size: 1rem;
+    gap: 10px;
+  }
+
+  .card-porto {
+    left: 150%;
+    top: 50%;
+  }
+
+  .porto .card-porto {
+    min-height: auto;
+    width: 100%;
+  }
+
+  .about .deskripsi b {
+    padding: 0 5px;
+  }
+
+  .navbar-brand {
+    font-size: 1rem;
+  }
+
+  .loader-content h1 {
+    font-size: 50px;
+    letter-spacing: 5px;
+  }
+
+  .porto .body-card {
+    padding: 10px 20px;
+  }
+
+  .body-card .title-card {
+    font-size: 1.5rem;
+  }
+
+  .body-card .stack {
+    gap: 5px;
+    margin-bottom: 10px;
+  }
+
+  .body-card .menu {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+
+  .body-card hr {
+    display: none;
+  }
+
+  .body-card .desk-card {
+    font-size: 13px;
+    margin-top: 10px;
+    margin-bottom: 3px;
+  }
+
+  .body-card .sub-card {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  .penjelasan {
+    font-size: 16px;
+  }
+
+  .body-card button {
+    font-size: 13px;
+    margin-top: 0px;
+  }
+
+  #youtube {
+    padding: 0;
+  }
+
+  .youtube {
+    margin: 0 40px;
+  }
+
+  .hid-mobile {
+    display: none;
+  }
+
+  .youtube .container {
+    padding: 0;
+  }
+
+  .youtube .flexible .card-youtube {
+    flex: 1 1 100%;
+  }
+
+  .youtube .tagline {
+    margin-bottom: 20px;
+  }
+
+  .youtube h2 {
+    font-size: 2.5rem;
+  }
+
+  .youtube .deskripsi {
+    margin-top: 5px;
+    line-height: 1.2;
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+  }
+
+  .youtube .flexible {
+    gap: 0px;
+  }
+
+  .youtube .flexible .card-youtube h5 {
+    font-size: 1rem;
+  }
+
+  .youtube .body-youtube .desc {
+    padding: 0px;
+    margin-top: 5px;
+  }
+
+  /* skill */
+
+  .skill-me {
+    height: auto;
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .skill-me h2 {
+    font-size: 2.5rem;
+  }
+
+  .skill-me .deskripsi {
+    margin-top: 10px;
+    line-height: 1.2;
+    font-size: 1.1rem;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .container-skill {
+    padding: 50px 40px;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .skill-me .text-content {
+    width: 100%;
+  }
+
+  .skill-me .grid-skill {
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .skill-me .box .top {
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+  }
+
+  .skill-me .box .image-tech {
+    width: 20%;
+  }
+
+  .skill-me .number {
+    font-size: 10px;
+    font-weight: 100;
+    color: #a0a0a0;
+  }
+
+  .name-tech {
+    padding: 0 20px;
+    text-align: left;
+  }
+
+  .name-tech h4 {
+    margin-top: 10px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-bottom: 3px;
+  }
+
+  .name-tech h5 {
+    font-size: 0.6rem;
+    margin-bottom: 10px;
+  }
+
+  .footer .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    /* Angka 0.6 adalah tingkat kegelapan (0-1) */
+    z-index: 2;
+  }
+
+  .footer {
+    padding: 80px 40px;
+  }
+
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+
+
+  .footer h4 {
+    font-size: 3.2rem;
+  }
+
+  .footer .tombol {
+    margin-top: 20px;
+  }
+
+  .footer button {
+    padding: 10px;
+    margin-top: 5px;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .footer .copyright {
+    font-size: 0.6rem;
+  }
 }

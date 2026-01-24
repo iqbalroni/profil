@@ -9,696 +9,575 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/style.css">
-    <title>Portfolio - Iqbalronii</title>
+    <title>Iqbal Roni | Portofolio</title>
+    <meta name="title" content="Iqbal Roni | Portofolio">
+    <meta name="description"
+        content="Portofolio profesional Mochammad Iqbal Roni Saputra. Pengembang Laravel, React.js, dan Flutter yang berfokus pada solusi digital futuristik dan performa tinggi.">
+    <meta name="keywords"
+        content="Iqbal Roni, Mochammad Iqbal Roni Saputra, Laravel Developer, React Developer Indonesia, Fullstack Developer, Portofolio Programmer, Web Developer Bondowoso">
+    <meta name="author" content="Mochammad Iqbal Roni Saputra">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Iqbal Roni | Fullstack Developer">
+    <meta property="og:description"
+        content="Lihat karya digital dan tech stack yang saya kuasai dalam pengembangan aplikasi web dan mobile.">
+    <meta property="og:image" content="https://domain-kamu.com/gambar-preview-web.jpg">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://domain-kamu.com/">
+    <meta property="twitter:title" content="Iqbal Roni | Fullstack Developer">
+    <meta property="twitter:description"
+        content="Portofolio Fullstack Developer dengan fokus pada Laravel dan React.js.">
+    <meta property="twitter:image" content="https://domain-kamu.com/gambar-preview-web.jpg">
 </head>
 
-<body id="body">
-
-    <!-- loading-page -->
-    <div class="loading" id="loading">
-        <i class="fa-solid fa-spinner"></i>
+<body>
+    <div id="loader" class="grid-background grid-container">
+        <div class="grid-mesh"></div>
+        <div class="vignette-effect"></div>
+        <div class="loader-content" id="tulisan">
+            <h1 id="cyber">IQBALRONI</h1>
+        </div>
+        <div class="copyright" id="copy">© 2026 IQBALRONII. Made with ❤️ and Coffee.</div>
     </div>
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
 
-    <!-- navbar -->
-    <nav class="navbar navbar-expand-lg fixed-top" id="navbar">
+
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark padding" id="navbar">
         <div class="container">
-            <div class="navbar-brand">IqbalRonii.</div>
+            <div class="navbar-brand">Iqbal<span>Ronii.</span></div>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <i class="fa-solid fa-bars"></i>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-arrow-up-right-icon lucide-arrow-up-right">
+                    <path d="M7 7h10v10" />
+                    <path d="M7 17 17 7" /></svg>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
+                <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" id="beranda">Beranda</a>
+                        <a class="nav-link" href="#">Beranda</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" id="about">Tentang & Keahlian</a>
+                        <a class="nav-link" href="#sticky">Tentang & Keahlian</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" id="projek">Proyek</a>
+                        <a class="nav-link" href="#next-section">Proyek</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" id="youtube">Youtube</a>
+                        <a class="nav-link" id="youtubes">Youtube</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" id="contact">Kontak</a>
                     </li>
                 </ul>
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <div class="nav-link" id="light"><img src="assets/sun.svg" alt=""></div>
-                        <div class="nav-link" id="dark"><img src="assets/moon.svg"></div>
-                    </li>
-                </ul>
             </div>
         </div>
     </nav>
-    <!-- end-navbar -->
 
-    <!-- banner -->
-    <div class="banner">
-        <div class="container">
-            <div class="menu-biodata">
-                <span class="welcome" id="welcome">Selamat datang di portofolio 👋</span>
+    <div class="grid-container" id="banner">
+        <div class="grid-mesh"></div>
+        <div class="vignette-effect"></div>
+        <div class="inner-content">
+            <div class="container sisi">
                 <div class="profil">
-                    <img src="assets/gambar.png" class="my-profil">
-                    <h2>Mochammad Iqbal<br>Roni Saputra</h2>
-                </div>
-                <div class="menu-home">
-                    <p>Saya adalah seorang Frontend Developer & Juga Backend Developer</p>
-                    <p>Nama saya Mochammad Iqbal Roni Saputra, seorang pengembang perangkat lunak dengan keahlian di
-                        berbagai bidang. Di backend, saya menguasai Laravel untuk membangun aplikasi web yang efisien
-                        dan aman. Di frontend, saya berpengalaman menggunakan React.js dan Bootstrap untuk membuat
-                        antarmuka yang responsif dan mudah digunakan.</p>
-                </div>
-                <div class="titles">
-                    <div class="pop"></div>
-                    <span class="pop-title">Sedang Mengajar di <b>SMKN 1 BONDOWOSO</b></span>
-                </div>
-                <div class="titles">
-                    <div class="pop"></div>
-                    <span class="pop-title">Junior Programmer</span>
-                </div>
-            </div>
-            <div class="menu-home">
-                <a href="assets/cv_mochammad_iqbal_roni.pdf" class="btn download-cv">Unduh CV Saya</a>
-                <a href="https://github.com/iqbalroni" class="btn download-cv">Kunjungi Github Saya</a>
-                <!-- content -->
-                <div class="workship">
-                    <p>🚀 Projek yang sedang saya kerjakan : </p>
-                    <div class="row mb-3">
-                        <div class="col-sm-4">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="titles">
-                                        <div class="pop-secondary"></div>
-                                        <span class="pop-title-bold">SIMAK Universitas Bondowoso</span>
-                                    </div>
-                                    <p class="desc">
-                                        Aplikasi SIMAK berbasis Android bertujuan untuk memudahkan mahasiswa mengakses
-                                        informasi akademik melalui handphone pribadi...
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-4">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="titles">
-                                        <div class="pop-secondary"></div>
-                                        <span class="pop-title-bold">SiPinter IAI At-Taqwa Bondowoso</span>
-                                    </div>
-                                    <p class="desc">
-                                        SiPinter adalah aplikasi yang dirancang untuk menangani proses pengeloaan data
-                                        akademik dan data terkait lainnya...
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="image-me">
+                        <img src="./assets/gambar.png" alt="Gambar Iqbal Roni">
+                    </div>
+                    <div class="text">
+                        <h1 id="firstName">MOCHAMMAD IQBAL</h1>
+                        <h1 id="secondName" class="accent">RONI SAPUTRA</h1>
                     </div>
                 </div>
-            </div>
-            <div class="about menu-about">
-                <p class="title">😊 Tentang Saya :</p>
-                <p>
-                    Saya, Mochammad Iqbal Roni Saputra, adalah pengembang perangkat lunak dengan keahlian di berbagai
-                    bidang. Di backend, saya menguasai Laravel, framework PHP yang kuat dan fleksibel untuk membangun
-                    aplikasi web yang efisien dan aman. Di frontend, saya berpengalaman menggunakan React.js dan
-                    Bootstrap untuk menciptakan antarmuka yang responsif dan user-friendly. Saya juga memiliki
-                    pengalaman di mobile development menggunakan Flutter, framework cross-platform yang memungkinkan
-                    saya membangun aplikasi mobile yang cepat.</p>
-                <p>Perjalanan saya dalam dunia pemrograman dimulai sejak di bangku SMK, di mana saya pertama kali terjun
-                    dalam dunia coding dan mengasah keterampilan teknis saya. Minat dan tekad saya dalam pengembangan
-                    perangkat lunak terus berkembang, hingga saya memutuskan untuk melanjutkan pendidikan di bidang
-                    Sistem Informasi di perguruan tinggi.</p>
-                <p>Jika saya punya waktu kosong, saya biasanya menghabiskannya untuk membuat konten tutorial Laravel di
-                    channel YouTube saya. Mulai dari menyiapkan konsep materi, merekam proses coding, sampai mengedit
-                    video agar mudah dipahami oleh penonton. Membuat konten seperti ini jadi cara saya berbagi
-                    pengetahuan sekaligus mengasah kemampuan saya.</p>
-                <p class="title">🚀 Teknologi & Bahasa dasar / basic yang pernah saya belajar : </p>
-                <div class="list-tech">
-                    <img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E"
-                        alt="JavaScript">
-                    <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"
-                        alt="CSS3">
-                    <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"
-                        alt="CSS3">
-                    <img src="https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white"
-                        alt="">
-                    <img src="https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white"
-                        alt="">
-                    <img src="https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white"
-                        alt="">
-                    <img src="https://img.shields.io/badge/json-5E5C5C?style=for-the-badge&logo=json&logoColor=white"
-                        alt="">
-                    <img src="https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue"
-                        alt="">
-                </div>
-                <p class="title">🦾 Teknologi yang saya kuasai : </p>
-                <div class="list-tech">
-                    <img src="https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white"
-                        alt="laravel">
-                    <img src="https://img.shields.io/badge/Node%20js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white"
-                        alt="node JS">
-                    <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB"
-                        alt="React Js">
-                    <img src="https://img.shields.io/badge/Express%20js-000000?style=for-the-badge&logo=express&logoColor=white"
-                        alt="">
-                    <img src="https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white"
-                        alt="">
-                    <img src="https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white"
-                        alt="">
-                    <img src="https://img.shields.io/badge/Codeigniter-EF4223?style=for-the-badge&logo=codeigniter&logoColor=white"
-                        alt="">
-                </div>
-                <p class="title">✒️ Aplikasi Design yang sering saya gunakan : </p>
-                <div class="list-tech">
-                    <img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white"
-                        alt="">
-                    <img src="https://img.shields.io/badge/Adobe%20Photoshop-31A8FF?style=for-the-badge&logo=Adobe%20Photoshop&logoColor=black"
-                        alt="">
-                    <img src="https://img.shields.io/badge/Adobe%20XD-470137?style=for-the-badge&logo=Adobe%20XD&logoColor=#FF61F6"
-                        alt="">
-                    <img src="https://img.shields.io/badge/Adobe%20Illustrator-FF9A00?style=for-the-badge&logo=adobe%20illustrator&logoColor=white"
-                        alt="">
-                </div>
-            </div>
-            <div class="myProject menu-projek">
-                <span class="welcome">🧑‍💻 Berikut beberapa proyek yang pernah saya kerjakan sebagai pengembang.
-                </span>
-                <div class="profil">
-                    <h2>Daftar Proyek saya</h2>
-                </div>
-                <div class="workship mb-3">
-                    <div class="d-flex align-items-center justify-content-between">
-                        <p>Projek yang pernah saya kerjakan : </p>
-                        <div class="formasi" id="grid"><i class="fa-solid fa-table-cells-large"></i></div>
-                        <div class="formasi" id="column"><i class="fa-regular fa-rectangle-list"></i></div>
-                    </div>
-
-                    <div class="flexible" id="proyek">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="titles">
-                                    <div class="info">
-                                        <img src="assets/kerjasama/spmb.png" alt="">
-                                    </div>
-                                    <span class="pop-title-bold">
-                                        <div class="status">
-                                            <div class="pop-web"></div>
-                                            Aplikasi Website
-                                        </div>
-                                        EAntre SPMB
-                                    </span>
-                                </div>
-                                <p class="desc">
-                                    Aplikasi antrian pendaftaran sekolah membantu sekolah mengatur proses pendaftaran
-                                    agar lebih cepat dan teratur. Calon siswa bisa mengambil nomor antrian secara online
-                                    tanpa harus datang lebih awal.
-                                </p>
-                                <!-- <button class="btn more-info">Selengkapnya</button> -->
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="titles">
-                                    <div class="info">
-                                        <img src="assets/kerjasama/iai.png" alt="">
-                                    </div>
-                                    <span class="pop-title-bold">
-                                        <div class="status">
-                                            <div class="pop-web"></div>
-                                            Aplikasi Website
-                                        </div>
-                                        SIAKAD IAI At Taqwa
-                                    </span>
-                                </div>
-                                <p class="desc">
-                                    Aplikasi Akademik Kampus IAI At Taqwa berbasis website merupakan platform digital
-                                    yang dirancang untuk mempermudah pengelolaan data akademik secara efisien dan
-                                    terintegrasi. Aplikasi ini telah tersinkronisasi dengan Neofeeder
-                                </p>
-                                <!-- <button class="btn more-info">Selengkapnya</button> -->
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="titles">
-                                    <div class="info">
-                                        <img src="assets/kerjasama/siakang.png" alt="">
-                                    </div>
-                                    <span class="pop-title-bold">
-                                        <div class="status">
-                                            <div class="pop-web"></div>
-                                            Aplikasi Website
-                                        </div>
-                                        SiAkang (Sistem Keuangan Sekolah)
-                                    </span>
-                                </div>
-                                <p class="desc">
-                                    sebuah platform yang dirancang untuk meningkatkan transparansi dalam
-                                    pengelolaan keuangan sekolah. Aplikasi ini memungkinkan siswa dan orang tua untuk
-                                    melihat secara langsung status pembayaran yang masih tertunggak atau sudah
-                                    dibayarkan
-                                </p>
-                                <!-- <button class="btn more-info">Selengkapnya</button> -->
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="titles">
-                                    <div class="info">
-                                        <img src="assets/kerjasama/Unibo.png" alt="">
-                                    </div>
-                                    <span class="pop-title-bold">
-                                        <div class="status">
-                                            <div class="pop-web"></div>
-                                            Aplikasi Website
-                                        </div>
-                                        Sistem Pengelolahan Akademik (UNIBO)
-                                    </span>
-                                </div>
-                                <p class="desc">
-                                    platform digital yang dirancang untuk memudahkan pengelolaan data akademik di
-                                    lingkungan perguruan tinggi. Aplikasi ini terintegrasi dengan Neofeeder yang
-                                    memungkinkan sinkronisasi data akademik
-                                </p>
-                                <!-- <button class="btn more-info">Selengkapnya</button> -->
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="titles">
-                                    <div class="info">
-                                        <img src="assets/kerjasama/Sipinter.png" alt="">
-                                    </div>
-                                    <span class="pop-title-bold">
-                                        <div class="status">
-                                            <div class="pop-mobile"></div>
-                                            Aplikasi Android
-                                        </div>
-                                        Mobile Apps SiPinter At-Taqwa
-                                    </span>
-                                </div>
-                                <p class="desc">
-                                    platform berbasis mobile yang tersedia di Playstore, dirancang khusus untuk
-                                    mahasiswa guna mengakses informasi akademik dengan mudah dari perangkat seluler
-                                    mereka. Aplikasi ini berbagai data penting seperti
-                                    jadwal perkuliahan, nilai semester
-                                </p>
-                                <!-- <button class="btn more-info">Selengkapnya</button> -->
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="titles">
-                                    <div class="info">
-                                        <img src="assets/kerjasama/bpr.png" alt="">
-                                    </div>
-                                    <span class="pop-title-bold">
-                                        <div class="status">
-                                            <div class="pop-web"></div>
-                                            Aplikasi Website
-                                        </div>
-                                        Sistem Kredit Bank BPR Jatim
-                                    </span>
-                                </div>
-                                <p class="desc">
-                                    solusi digital yang memudahkan pelaku usaha mikro, kecil, dan menengah (UMKM) dalam
-                                    mengakses layanan kredit dari Bank UMKM Jatim. Aplikasi ini dirancang untuk membantu
-                                    nasabah mengajukan kredit, melacak status pengajuan
-                                </p>
-                                <!-- <button class="btn more-info">Selengkapnya</button> -->
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="titles">
-                                    <div class="info">
-                                        <img src="assets/kerjasama/smk1.png" alt="">
-                                    </div>
-                                    <span class="pop-title-bold">
-                                        <div class="status">
-                                            <div class="pop-web"></div>
-                                            Aplikasi Website
-                                        </div>
-                                        Website Sekolah (CMS)
-                                    </span>
-                                </div>
-                                <p class="desc">
-                                    Aplikasi Sekolah Berbasis CMS yang dibangun menggunakan Laravel adalah sebuah
-                                    platform manajemen sekolah yang fleksibel dan dinamis. Aplikasi ini memudahkan
-                                    sekolah dalam mengelola berbagai aspek administrasi dan akademik
-                                </p>
-                                <!-- <button class="btn more-info">Selengkapnya</button> -->
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="titles">
-                                    <div class="info">
-                                        <img src="assets/kerjasama/roti.png" alt="">
-                                    </div>
-                                    <span class="pop-title-bold">
-                                        <div class="status">
-                                            <div class="pop-web"></div>
-                                            Aplikasi Website
-                                        </div>
-                                        Sistem Point Of Sale Bread
-                                    </span>
-                                </div>
-                                <p class="desc">
-                                    solusi digital yang dirancang khusus untuk bisnis bakery dan toko roti, memudahkan
-                                    dalam mengelola penjualan, inventaris, dan operasional harian. Aplikasi ini
-                                    menyediakan antarmuka yang intuitif dan user-friendly
-                                </p>
-                                <!-- <button class="btn more-info">Selengkapnya</button> -->
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="titles">
-                                    <div class="info">
-                                        <img src="assets/kerjasama/Unibo.png" alt="">
-                                    </div>
-                                    <span class="pop-title-bold">
-                                        <div class="status">
-                                            <div class="pop-mobile"></div>
-                                            Aplikasi Android
-                                        </div>
-                                        Mobile Apps Aplikasi Akademik At-Taqwa
-                                    </span>
-                                </div>
-                                <p class="desc">
-                                    platform digital yang dirancang khusus untuk mahasiswa Universitas Bondowoso guna
-                                    mengakses informasi akademik mereka secara mudah dan praktis melalui perangkat
-                                    seluler.
-                                </p>
-                                <!-- <button class="btn more-info">Selengkapnya</button> -->
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="titles">
-                                    <div class="info">
-                                        <img src="assets/kerjasama/esport.png" alt="">
-                                    </div>
-                                    <span class="pop-title-bold">
-                                        <div class="status">
-                                            <div class="pop-web"></div>
-                                            Aplikasi Website
-                                        </div>
-                                        Aplikasi Pendaftaran E-sport
-                                    </span>
-                                </div>
-                                <p class="desc">
-                                    Aplikasi ini memungkinkan siswa untuk mendaftar sebagai peserta, membuat tim, dan
-                                    mengikuti berbagai turnamen atau acara esports yang diselenggarakan oleh sekolah.
-                                </p>
-                                <!-- <button class="btn more-info">Selengkapnya</button> -->
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="titles">
-                                    <div class="info">
-                                        <img src="assets/kerjasama/tryout.png" alt="">
-                                    </div>
-                                    <span class="pop-title-bold">
-                                        <div class="status">
-                                            <div class="pop-mobile"></div>
-                                            Aplikasi Mobile
-                                        </div>
-                                        Aplikasi tryout berbasis android
-                                    </span>
-                                </div>
-                                <p class="desc">
-                                    platform interaktif yang dirancang untuk membantu pengguna dalam mempersiapkan
-                                    ujian, meningkatkan pengetahuan, atau sekadar menguji kemampuan dalam berbagai
-                                    topik.Aplikasi ini menyediakan berbagai jenis kuis dan simulasi ujian yang dapat
-                                    diakses kapan saja
-                                </p>
-                                <!-- <button class="btn more-info">Selengkapnya</button> -->
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="titles">
-                                    <div class="info">
-                                        <img src="assets/kerjasama/yukMasak.png" alt="">
-                                    </div>
-                                    <span class="pop-title-bold">
-                                        <div class="status">
-                                            <div class="pop-mobile"></div>
-                                            Aplikasi Mobile
-                                        </div>
-                                        Pencari Resep Masakan (YukMasak)
-                                    </span>
-                                </div>
-                                <p class="desc">
-                                    platform mobile yang dirancang untuk mempermudah pengguna dalam mencari dan
-                                    menemukan berbagai resep masakan dari berbagai belahan dunia. Dengan antarmuka yang
-                                    intuitif dan user-friendly
-                                </p>
-                                <!-- <button class="btn more-info">Selengkapnya</button> -->
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="titles">
-                                    <div class="info">
-                                        <img src="assets/kerjasama/anime.png" alt="">
-                                    </div>
-                                    <span class="pop-title-bold">
-                                        <div class="status">
-                                            <div class="pop-web"></div>
-                                            Aplikasi Website
-                                        </div>
-                                        Aplikasi Scrapping data Anime
-                                    </span>
-                                </div>
-                                <p class="desc">
-                                    platform digital yang dirancang untuk mengumpulkan dan mengorganisir informasi
-                                    terkait anime dari berbagai sumber di internet. Aplikasi ini memanfaatkan teknik web
-                                    scraping untuk mengekstrak data seperti judul anime, genre, sinopsis, rating
-                                </p>
-                                <!-- <button class="btn more-info">Selengkapnya</button> -->
-                            </div>
+                <p id="deskripsi" class="deskripsi"><b>Frontend, Backend, dan Mobile Developer.</b> Berpengalaman
+                    membangun
+                    aplikasi web dan mobile menggunakan <b>Laravel</b> di sisi backend serta <b>React.js</b> dan
+                    <b>Flutter</b>
+                    di sisi frontend untuk menghasilkan antarmuka yang responsif, modern, dan mudah digunakan.</b></p>
+                <div class="box" id="box">
+                    <div class="kotak">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-map-pin-icon lucide-map-pin">
+                            <path
+                                d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" />
+                            <circle cx="12" cy="10" r="3" /></svg>
+                        <div class="isi">
+                            <h4>LOKASI</h4>
+                            <h5>INDONESIA</h5>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="youtube menu-youtube">
-                <span class="welcome">📺 Beberapa konten pembelajaran yang saya buat di channel tutorial coding</span>
-                <div class="profil">
-                    <h2>Konten Pembelajaran</h2>
-                </div>
-                <div class="workship mb-3">
-                    <div class="d-flex align-items-center justify-content-between">
-                        <p>Kontent Pembelajaran Di Channel Saya : </p>
-                    </div>
-
-                    <div class="flexible" id="proyek">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="titles">
-                                    <iframe width="100%" height="215"
-                                        src="https://www.youtube.com/embed/upOxC-rVJsU?si=4MGB_Sf9iyzvZxX4"
-                                        title="YouTube video player" frameborder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                                </div>
-                                <p class="desc">
-                                    <h5 class="font-weight-bold">Laravel 12 Tutorial #1: Installasi Framework Laravel
-                                        (Cocok Bagi...</h5>
-                                    <p style="font-size: 15px;">25rb x ditonton</p>
-                                </p>
-                                <!-- <button class="btn more-info">Selengkapnya</button> -->
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="titles">
-                                    <iframe width="100%" height="215"
-                                        src="https://www.youtube.com/embed/BXGhDPsJwFA?si=T1ygGTSgnrCNwo_a"
-                                        title="YouTube video player" frameborder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                                </div>
-                                <p class="desc">
-                                    <h5 class="font-weight-bold">Laravel 12 Tutorial #2: Panduan Struktur Folder &
-                                        Konfigurasi...</h5>
-                                    <p style="font-size: 15px;">11rb x ditonton</p>
-                                </p>
-                                <!-- <button class="btn more-info">Selengkapnya</button> -->
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="titles">
-                                    <iframe width="100%" height="215"
-                                        src="https://www.youtube.com/embed/fNUePf-EyuA?si=dB_4MSpdtMSuS3Py"
-                                        title="YouTube video player" frameborder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                                </div>
-                                <p class="desc">
-                                    <h5 class="font-weight-bold">Laravel 12 Tutorial #3: Pahami Routing dan View (Wajib
-                                        Tahu Unt...</h5>
-                                    <p style="font-size: 15px;">9,5rb x ditonton</p>
-                                </p>
-                                <!-- <button class="btn more-info">Selengkapnya</button> -->
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="titles">
-                                    <iframe width="100%" height="215"
-                                        src="https://www.youtube.com/embed/Y1N0JRtDAGA?si=ecJvYzvZiANtuExI"
-                                        title="YouTube video player" frameborder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                                </div>
-                                <p class="desc">
-                                    <h5 class="font-weight-bold">Laravel 12 Tutorial #4: Blade Template Laravel (Pemula
-                                        Wajib...</h5>
-                                    <p style="font-size: 15px;">5,4rb x ditonton</p>
-                                </p>
-                                <!-- <button class="btn more-info">Selengkapnya</button> -->
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="titles">
-                                    <iframe width="100%" height="215"
-                                        src="https://www.youtube.com/embed/WHtCJzKHgEg?si=0_w2uGBeWHvoz4TD"
-                                        title="YouTube video player" frameborder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                                </div>
-                                <p class="desc">
-                                    <h5 class="font-weight-bold">Laravel 12 Tutorial #5: Pahami Controller & Konsep MVC
-                                        dengan...</h5>
-                                    <p style="font-size: 15px;">3,3rb x ditonton</p>
-                                </p>
-                                <!-- <button class="btn more-info">Selengkapnya</button> -->
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="titles">
-                                    <iframe width="100%" height="215"
-                                        src="https://www.youtube.com/embed/faK7DaN9GjY?si=s2nYFsS8-nvLX4pz"
-                                        title="YouTube video player" frameborder="0"
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                                </div>
-                                <p class="desc">
-                                    <h5 class="font-weight-bold">Laravel 12 Tutorial #6: Pahami Model & Konsep MVC
-                                        dengan...</h5>
-                                    <p style="font-size: 15px;">2,3rb x ditonton</p>
-                                </p>
-                                <!-- <button class="btn more-info">Selengkapnya</button> -->
-                            </div>
-                        </div>
-                        <a href="https://www.youtube.com/@iqbalronii/videos" class="btn btn-block download-cv mt-1">Video Selengkapnya</a>
-                        <!-- <a href="https://www.youtube.com/@iqbalronii/videos" class="button">Video Selengkapnya</a> -->
-                    </div>
-                </div>
-            </div>
-            <div class="menu-contact">
-                <div class="row">
-                    <div class="col-sm-6">
-                        <div class="profil">
-                            <h2>Apakah Ada <br>Pertanyaan?</h2>
-                        </div>
-                        <p>Jika Anda ingin berkolaborasi, berdiskusi, atau memiliki pertanyaan, jangan ragu untuk
-                            menghubungi saya. Anda dapat menghubungi saya melalui email di Roniesaputra92@gmail.com,Saya
-                            akan dengan
-                            senang hati menjawab setiap pertanyaan atau peluang yang Anda tawarkan.</p>
-                        <div class="contacts">
-                            <h3>Hubungi Saya</h3>
-                            <div class="pin">
-                                <i class="fa-regular fa-envelope"></i>
-                                Roniesaputra92@gmail.com
-                            </div>
-                            <div class="pin">
-                                <i class="fa-brands fa-github"></i>
-                                github.com/iqbalroni
-                            </div>
-                            <div class="pin">
-                                <i class="fa-brands fa-instagram"></i>
-                                instagram.com/@iqbalronii
-                            </div>
-                            <div class="pin">
-                                <i class="fa-solid fa-earth-asia"></i>
-                                Asia ,Indonesia,Jawa Timur,Bondowoso
-                            </div>
+                    <div class="kotak">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-terminal-icon lucide-terminal">
+                            <path d="M12 19h8" />
+                            <path d="m4 17 6-6-6-6" /></svg>
+                        <div class="isi">
+                            <h4>LEVEL</h4>
+                            <h5>JUNIOR PROGRAMMER</h5>
                         </div>
                     </div>
-                    <div class="col-sm-6 contact-me">
-                        <form action="">
-                            <form>
-                                <div class="row">
-                                    <div class="col-sm-6">
-                                        <div class="jarak-bawah">
-                                            <label class="form-label">Nama Depan</label>
-                                            <div class="form-floating">
-                                                <input id="depan" type="text" class="form-control">
-                                                <label for="depan">Nama Depan</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <div class="jarak-bawah">
-                                            <label class="form-label">Nama Belakang</label>
-                                            <div class="form-floating">
-                                                <input id="belakang" type="text" class="form-control">
-                                                <label for="belakang">Nama Belakang</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="jarak-bawah">
-                                    <label class="form-label">Email</label>
-                                    <div class="form-floating">
-                                        <input id="email" type="email" class="form-control">
-                                        <label for="email">Email</label>
-                                    </div>
-                                </div>
-                                <div class="jarak-bawah">
-                                    <label class="form-label">Pesan</label>
-                                    <div class="form-floating">
-                                        <textarea class="form-control" placeholder="Leave a comment here"
-                                            id="floatingTextarea2" style="height: 100px"></textarea>
-                                        <label for="floatingTextarea2">Comments</label>
-                                    </div>
-                                </div>
-                                <button type="submit" class="btn more-info">Kirim Pesan Anda!!</button>
-                            </form>
-                        </form>
+                    <div class="kotak">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-school-icon lucide-school">
+                            <path d="M14 21v-3a2 2 0 0 0-4 0v3" />
+                            <path d="M18 5v16" />
+                            <path d="m4 6 7.106-3.79a2 2 0 0 1 1.788 0L20 6" />
+                            <path
+                                d="m6 11-3.52 2.147a1 1 0 0 0-.48.854V19a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-5a1 1 0 0 0-.48-.853L18 11" />
+                            <path d="M6 5v16" />
+                            <circle cx="12" cy="9" r="2" /></svg>
+                        <div class="isi">
+                            <h4>AKTIVITAS</h4>
+                            <h5>MENGAJAR SMK</h5>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- end-banner -->
 
-    <!-- top-button -->
-    <a href="#" class="top-button" id="toUp">
-        <i class="fa-solid fa-arrow-up"></i>
-    </a>
-    <!-- top-button -->
+    <div class="grid-container" id="sticky">
+        <div class="grid-mesh"></div>
+        <div class="vignette-effect"></div>
+        <div class="about" id="about-section">
+            <div class="container">
+                <h4 class="tagline" id="tagline-about">01 / TENTANG SAYA</h4>
+                <h2 id="title-konsisten">KONSISTEN</h2>
+                <p id="about-desk" class="deskripsi">Saya Mochammad Iqbal Roni Saputra, pengembang perangkat lunak
+                    dengan fokus pada
+                    <b>Backend (Laravel), Frontend (React.js)</b>, serta <b>Mobile Development (Flutter).</b> Saya
+                    menekuni dunia coding sejak SMK dan kini sedang menempuh pendidikan di program studi Sistem
+                    Informasi. Di sela kesibukan, saya aktif <b>membagikan ilmu</b> melalui konten tutorial Laravel di
+                    <b>YouTube</b> sebagai sarana untuk berbagi sekaligus mengasah kemampuan teknis saya.</p>
+                <button id="keahlian-button">Keahlian Saya
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-move-right-icon lucide-move-right">
+                        <path d="M18 8L22 12L18 16" />
+                        <path d="M2 12H22" /></svg>
+                </button>
+            </div>
+        </div>
+    </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"
-        integrity="sha512-+k1pnlgt4F1H8L7t3z95o3/KO+o78INEcXTbnoJQ/F2VqDVhWoaiVml/OEHv9HsVgxUaVW+IbiZPUJQfF/YxZw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="js/main.js"></script>
+    <div class="grid-container" id="next-section">
+        <div class="grid-mesh"></div>
+        <div class="vignette-effect"></div>
+        <div class="porto" id="portfolio">
+            <div class="container-portofolio">
+                <div class="text-content">
+                    <h4 class="tagline">02 / PROYEK SAYA</h4>
+                    <h2 id="title-konsisten-porto">KARYA DIGITAL BUATAN SAYA</h2>
+                    <p class="deskripsi">Beberapa proyek yang pernah saya kerjakan sebagai pengembang, mencakup berbagai
+                        jenis aplikasi berbasis web dan mobile yang dirancang untuk memenuhi kebutuhan pengguna secara
+                        nyata.</p>
+                </div>
+
+                <div class="cards-wrapper">
+                    <div class="card-porto satu">
+                        <img src="./assets/image4.png" class="image-porto" alt="aksara bws">
+                        <div class="body-card">
+                            <h3 class="title-card">AKSARA APP</h3>
+                            <h4 class="desk-card">Akademik, Sistem, dan Pelaporan Terpadu<h5>
+                                    <p class="sub-card">Aplikasi Perkuliahan</p>
+                                    <div class="stack">
+                                        <div class="menu laravel">Laravel</div>
+                                        <div class="menu mysql">MYSQL</div>
+                                        <div class="menu flutter">Flutter</div>
+                                        <div class="menu bootstrap">Bootstrap</div>
+                                    </div>
+                                    <hr>
+                                    <p class="penjelasan">Kelola seluruh proses administrasi kampus dalam satu dashboard
+                                        pintar. Sinkronisasi
+                                        otomatis ke Neo Feeder tanpa perlu input manual berulang kali.</p>
+                                    <button>Lihat Proyek
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-arrow-up-right-icon lucide-arrow-up-right">
+                                            <path d="M7 7h10v10" />
+                                            <path d="M7 17 17 7" /></svg>
+                                    </button>
+                        </div>
+                    </div>
+                    <div class="card-porto dua">
+                        <img src="./assets/image2.png" class="image-porto" alt="aksara bws">
+                        <div class="body-card">
+                            <h3 class="title-card">SIPINTER</h3>
+                            <h4 class="desk-card">Sistem Pelayanan & Informasi Terintegrasi.<h5>
+                                    <p class="sub-card">IAI At-Taqwa Bondowoso</p>
+                                    <div class="stack">
+                                        <div class="menu laravel">Laravel</div>
+                                        <div class="menu mysql">MYSQL</div>
+                                        <div class="menu flutter">Flutter</div>
+                                        <div class="menu bootstrap">Bootstrap</div>
+                                    </div>
+                                    <hr>
+                                    <p class="penjelasan">Kelola seluruh proses administrasi kampus dalam satu dashboard
+                                        pintar. Sinkronisasi
+                                        otomatis ke Neo Feeder tanpa perlu input manual berulang kali.</p>
+                                    <button>Lihat Proyek
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-arrow-up-right-icon lucide-arrow-up-right">
+                                            <path d="M7 7h10v10" />
+                                            <path d="M7 17 17 7" /></svg>
+                                    </button>
+                        </div>
+                    </div>
+                    <div class="card-porto tiga">
+                        <img src="./assets/image1.png" class="image-porto" alt="aksara bws">
+                        <div class="body-card">
+                            <h3 class="title-card">DESIGN WEB ESPORT</h3>
+                            <h4 class="desk-card">UI / UX Aplikasi Web Esport.<h5>
+                                    <p class="sub-card">Design aplikasi </p>
+                                    <div class="stack">
+                                        <div class="menu figma">FIgma</div>
+                                    </div>
+                                    <hr>
+                                    <p class="penjelasan">Desain web e-sport game ini dibuat sebagai media pembelajaran
+                                        UI/UX dengan fokus pada tampilan modern, futuristik, dan kompetitif.</p>
+                                    <button>Lihat Proyek
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-arrow-up-right-icon lucide-arrow-up-right">
+                                            <path d="M7 7h10v10" />
+                                            <path d="M7 17 17 7" /></svg>
+                                    </button>
+                        </div>
+                    </div>
+                    <div class="card-porto empat">
+                        <img src="./assets/image3.png" class="image-porto" alt="aksara bws">
+                        <div class="body-card">
+                            <h3 class="title-card">SIMAK UNIBO</h3>
+                            <h4 class="desk-card">Sistem Integrasi Manajemen dan Akademik.<h5>
+                                    <p class="sub-card">Universitas Bondowoso</p>
+                                    <div class="stack">
+                                        <div class="menu laravel">Laravel</div>
+                                        <div class="menu flutter">Flutter</div>
+                                        <div class="menu mysql">MYSQL</div>
+                                    </div>
+                                    <hr>
+                                    <p class="penjelasan">sebuah sistem yang menyatukan berbagai aspek manajemen dan
+                                        akademik dalam sebuah platform terintegrasi. Sistem ini dirancang untuk
+                                        memudahkan
+                                        pengelolaan data, proses, dan informasi.</p>
+                                    <button>Lihat Proyek
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="lucide lucide-arrow-up-right-icon lucide-arrow-up-right">
+                                            <path d="M7 7h10v10" />
+                                            <path d="M7 17 17 7" /></svg>
+                                    </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="grid-container" id="youtube">
+        <div class="grid-mesh"></div>
+        <div class="vignette-effect"></div>
+        <div class="youtube">
+            <div class="container" id="youtube-section">
+                <h4 class="tagline" id="tag-youtube">03 / CHANNEL YOUTUBE</h4>
+                <h2 id="titles-youtube">Konten Pembelajaran</h2>
+                <p class="deskripsi" id="deskripsi-youtube">Beberapa konten pembelajaran yang saya buat di channel
+                    tutorial coding</p>
+                <div class="flexible" id="proyek">
+                    <div class="card-youtube">
+                        <div class="body-youtube">
+                            <div class="titles">
+                                <iframe width="100%" height="215"
+                                    src="https://www.youtube.com/embed/upOxC-rVJsU?si=4MGB_Sf9iyzvZxX4"
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            </div>
+                            <div class="desc">
+                                <h5 class="font-weight-bold">Laravel 12 Tutorial #1: Installasi Framework Laravel
+                                    (Cocok Bagi...</h5>
+                                <p style="font-size: 15px;">25rb ditonton</p>
+                            </div>
+                            <!-- <button class="btn more-info">Selengkapnya</button> -->
+                        </div>
+                    </div>
+                    <div class="card-youtube">
+                        <div class="body-youtube">
+                            <div class="titles">
+                                <iframe width="100%" height="215"
+                                    src="https://www.youtube.com/embed/BXGhDPsJwFA?si=T1ygGTSgnrCNwo_a"
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            </div>
+                            <div class="desc">
+                                <h5 class="font-weight-bold">Laravel 12 Tutorial #2: Panduan Struktur Folder &
+                                    Konfigurasi...</h5>
+                                <p style="font-size: 15px;">11rb ditonton</p>
+                            </div>
+                            <!-- <button class="btn more-info">Selengkapnya</button> -->
+                        </div>
+                    </div>
+                    <div class="card-youtube">
+                        <div class="body-youtube">
+                            <div class="titles">
+                                <iframe width="100%" height="215"
+                                    src="https://www.youtube.com/embed/fNUePf-EyuA?si=dB_4MSpdtMSuS3Py"
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            </div>
+                            <div class="desc">
+                                <h5 class="font-weight-bold">Laravel 12 Tutorial #3: Pahami Routing dan View (Wajib
+                                    Tahu...</h5>
+                                <p style="font-size: 15px;">9,5rb ditonton</p>
+                            </div>
+                            <!-- <button class="btn more-info">Selengkapnya</button> -->
+                        </div>
+                    </div>
+                    <div class="card-youtube hid-mobile">
+                        <div class="body-youtube">
+                            <div class="titles">
+                                <iframe width="100%" height="215"
+                                    src="https://www.youtube.com/embed/Y1N0JRtDAGA?si=ecJvYzvZiANtuExI"
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            </div>
+                            <div class="desc">
+                                <h5 class="font-weight-bold">Laravel 12 Tutorial #4: Blade Template Laravel (Pemula
+                                    Wajib...</h5>
+                                <p style="font-size: 15px;">5,4rb ditonton</p>
+                            </div>
+                            <!-- <button class="btn more-info">Selengkapnya</button> -->
+                        </div>
+                    </div>
+                    <div class="card-youtube hid-mobile">
+                        <div class="body-youtube">
+                            <div class="titles">
+                                <iframe width="100%" height="215"
+                                    src="https://www.youtube.com/embed/WHtCJzKHgEg?si=0_w2uGBeWHvoz4TD"
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            </div>
+                            <div class="desc">
+                                <h5 class="font-weight-bold">Laravel 12 Tutorial #5: Pahami Controller & Konsep MVC
+                                    dengan...</h5>
+                                <p style="font-size: 15px;">3,3rb ditonton</p>
+                            </div>
+                            <!-- <button class="btn more-info">Selengkapnya</button> -->
+                        </div>
+                    </div>
+                    <div class="card-youtube hid-mobile">
+                        <div class="body-youtube">
+                            <div class="titles">
+                                <iframe width="100%" height="215"
+                                    src="https://www.youtube.com/embed/faK7DaN9GjY?si=s2nYFsS8-nvLX4pz"
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            </div>
+                            <div class="desc">
+                                <h5 class="font-weight-bold">Laravel 12 Tutorial #6: Pahami Model & Konsep MVC
+                                    dengan...</h5>
+                                <p style="font-size: 15px;">2,3rb ditonton</p>
+                            </div>
+                            <!-- <button class="btn more-info">Selengkapnya</button> -->
+                        </div>
+                    </div>
+                    <a class="more-video" href="https://www.youtube.com/@iqbalronii/videos"
+                        class="btn btn-block download-cv mt-1">Video
+                        Selengkapnya
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-arrow-up-right-icon lucide-arrow-up-right">
+                            <path d="M7 7h10v10" />
+                            <path d="M7 17 17 7" /></svg></a>
+                    <!-- <a href="https://www.youtube.com/@iqbalronii/videos" class="button">Video Selengkapnya</a> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="grid-container" id="skill">
+        <div class="grid-mesh"></div>
+        <div class="vignette-effect"></div>
+        <div class="skill-me" id="skillMe">
+            <div class="container-skill">
+                <div class="text-content">
+                    <h4 class="tagline">04 / KEAHLIAN SAYA</h4>
+                    <h2 id="title-konsisten-porto">KEAHLIAN<br>TECH STACK</h2>
+                    <p class="deskripsi">Berikut adalah skill dan teknologi yang saya gunakan dalam mengembangkan
+                        aplikasi, mulai dari perancangan sistem, pengolahan data, hingga pembuatan antarmuka.</p>
+                </div>
+                <div class="grid-skill">
+                    <div class="box skill-card">
+                        <div class="top">
+                            <div class="number">01</div>
+                            <img src="./assets/tech/react.svg" alt="" class="image-tech">
+                        </div>
+                        <div class="name-tech">
+                            <h4>REACT.JS</h4>
+                            <h5>LIBRARY</h5>
+                        </div>
+                    </div>
+                    <div class="box skill-card">
+                        <div class="top">
+                            <div class="number">02</div>
+                            <img src="./assets/tech/nodejs.svg" alt="" class="image-tech">
+                        </div>
+                        <div class="name-tech">
+                            <h4>NODE.JS</h4>
+                            <h5>RUNTIME</h5>
+                        </div>
+                    </div>
+                    <div class="box skill-card">
+                        <div class="top">
+                            <div class="number">03</div>
+                            <img src="./assets/tech/laravel.svg" alt="" class="image-tech">
+                        </div>
+                        <div class="name-tech">
+                            <h4>LARAVEL</h4>
+                            <h5>FRAMEWORK</h5>
+                        </div>
+                    </div>
+                    <div class="box skill-card">
+                        <div class="top">
+                            <div class="number">04</div>
+                            <img src="./assets/tech/flutter.svg" alt="" class="image-tech">
+                        </div>
+                        <div class="name-tech">
+                            <h4>FLUTTER</h4>
+                            <h5>FRAMEWORK</h5>
+                        </div>
+                    </div>
+                    <div class="box skill-card">
+                        <div class="top">
+                            <div class="number">05</div>
+                            <img src="./assets/tech/javascript.svg" alt="" class="image-tech">
+                        </div>
+                        <div class="name-tech">
+                            <h4>JAVASCRIPT</h4>
+                            <h5>BAHASA PEMROGRAMAN</h5>
+                        </div>
+                    </div>
+                    <div class="box skill-card">
+                        <div class="top">
+                            <div class="number">06</div>
+                            <img src="./assets/tech/express.svg" alt="" class="image-tech">
+                        </div>
+                        <div class="name-tech">
+                            <h4>EXPRESS</h4>
+                            <h5>FRAMEWORK</h5>
+                        </div>
+                    </div>
+                    <div class="box skill-card">
+                        <div class="top">
+                            <div class="number">07</div>
+                            <img src="./assets/tech/figma.svg" alt="" class="image-tech">
+                        </div>
+                        <div class="name-tech">
+                            <h4>FIGMA</h4>
+                            <h5>DESIGN TOOLS</h5>
+                        </div>
+                    </div>
+                    <div class="box skill-card">
+                        <div class="top">
+                            <div class="number">08</div>
+                            <img src="./assets/tech/inertia.svg" alt="" class="image-tech">
+                        </div>
+                        <div class="name-tech">
+                            <h4>INERTIA</h4>
+                            <h5>LIBRARY</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="grid-container">
+        <div class="footer">
+            <div class="overlay"></div>
+            <div class="container footer-content">
+                <div class="text">
+                    <h4 id="footA">KUNJUNGI</h4>
+                    <h4 id="footB">SOSIALMEDIA</h4>
+                </div>
+                <div class="tombol d-flex flex-column">
+                    Ikuti Sosial Media Saya :
+                    <button>
+                        <div class="text">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-instagram-icon lucide-instagram">
+                                <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" /></svg>
+                            instagram.com/iqbalronii
+                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-arrow-up-right-icon lucide-arrow-up-right">
+                            <path d="M7 7h10v10" />
+                            <path d="M7 17 17 7" /></svg>
+                    </button>
+                    <button>
+                        <div class="text">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-github-icon lucide-github">
+                                <path
+                                    d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+                                <path d="M9 18c-4.51 2-5-2-7-2" /></svg>
+                            github.com/iqbalroni
+                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-arrow-up-right-icon lucide-arrow-up-right">
+                            <path d="M7 7h10v10" />
+                            <path d="M7 17 17 7" /></svg>
+                    </button>
+                    <button>
+                        <div class="text">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-youtube-icon lucide-youtube">
+                                <path
+                                    d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17" />
+                                <path d="m10 15 5-3-5-3z" /></svg>
+                            youtube.com/@iqbalronii
+                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-arrow-up-right-icon lucide-arrow-up-right">
+                            <path d="M7 7h10v10" />
+                            <path d="M7 17 17 7" /></svg>
+                    </button>
+                </div>
+            </div>
+            <div class="copyright">© 2026 IQBALRONII. Made with ❤️ and Coffee.</div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="js/loading.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/cursor.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
     </script>
